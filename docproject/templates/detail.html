@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{document.img.url}}"  width="300" height="300">
+        </div>
+<div class="col-md-6">
+    <h2>{{document.name}}</h2>
+    <h4>{{document.desc}}</h4>
+    <h6>{{document.year}}</h6>
+    <a class="btn btn-warning" href="{% url 'docapp:update' document.id %}">Update </a>
+    <a class="btn btn-danger" href="{% url 'docapp:delete' document.id %}">Delete </a>
+
+</div>
+
+    </div>
+</div>
+
+{% endblock %}
